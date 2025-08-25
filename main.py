@@ -78,25 +78,7 @@ def save_to_json(data, filename):
         print(f'JSON 파일 저장 오류: {e}')
         return False
 
-def search_logs(data, search_term):
-    """특정 문자열을 포함한 로그 검색 (보너스 과제)"""
-    results = []
-    
-    for log in data:
-        # 모든 필드에서 검색어 찾기
-        for key, value in log.items():
-            if search_term.lower() in value.lower():
-                results.append(log)
-                break
-    
-    print(f'=== "{search_term}" 검색 결과 ({len(results)}개) ===')
-    for result in results:
-        print(f"시간: {result.get('timestamp', 'N/A')}")
-        print(f"이벤트: {result.get('event', 'N/A')}")  
-        print(f"메시지: {result.get('message', 'N/A')}")
-        print('-' * 40)
-    
-    return results
+# 보너스 기능 제거됨
 
 def main():
     """메인 실행 함수"""
